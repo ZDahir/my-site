@@ -2,11 +2,11 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  AndroidIcon,
+  CalendarIcon,
   ChromeIcon,
   InstagramIcon,
   LinkedinIcon,
-  NetlifyIcon,
+  SpotifyIcon,
   TwitterIcon,
 } from "./Constant/SvgIcon";
 
@@ -14,19 +14,19 @@ const IconSection = () => {
   return (
     <IconContainer>
       <IconWrapper>
-        <LinkedinIcon />
+      <LinkedinIcon url="https://linkedin.com/in/zaiddahir" />
       </IconWrapper>
       <IconWrapper>
-        <TwitterIcon />
+        <TwitterIcon url="https://x.com/zaidmdahir"/>
       </IconWrapper>
       <IconWrapper>
-        <InstagramIcon />
+        <InstagramIcon url="https://www.instagram.com/zaiddahir/"/>
       </IconWrapper>
       <IconWrapper>
-        <NetlifyIcon />
+        <SpotifyIcon url ="https://open.spotify.com/user/21rx57rdnwgnoj62wnuuz6bna?si=5b8bcce2f1a7406c" />
       </IconWrapper>
       <IconWrapper>
-        <AndroidIcon />
+      <CalendarIcon url="/book" />
       </IconWrapper>
     </IconContainer>
   );
@@ -37,16 +37,25 @@ export default IconSection;
 const IconContainer = styled.div`
   display: flex;
   gap: 10px;
-  margin: 20px 0;
+  margin: 24px 0;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const IconWrapper = styled.div`
   width: 48px;
   height: 48px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #fff9;
   cursor: pointer;
+  &:hover {
+    background-color: #ffff;
+  }
 `;

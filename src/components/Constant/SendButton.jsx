@@ -6,13 +6,15 @@ import styled from "styled-components";
 const SendButton = ({ className }) => {
   return (
     <>
-      <BtnContainer className={className}>Send me a message</BtnContainer>
+      <BtnContainer href="#" className={className}>
+        Send me a message
+      </BtnContainer>
     </>
   );
 };
 
 export default SendButton;
-const BtnContainer = styled.button`
+const BtnContainer = styled.a`
   background: none;
   border: none;
   margin-top: 2em;
@@ -23,4 +25,5 @@ const BtnContainer = styled.button`
   font-weight: 700;
   font-size: 16px;
   padding: 0;
+  color: #000000;
 `;

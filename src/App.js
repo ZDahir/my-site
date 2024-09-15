@@ -1,73 +1,52 @@
-/** @format */
-
-import styled from "styled-components";
-import HeroSection from "./components/HeroSection";
-import SecondarySection from "./components/SecondarySection";
-import EventSection from "./components/Constant/EventSection";
-import FooterComponent from "./components/FooterComponent";
-import Line from "./components/Line";
-import Lead from "./components/Lead";
-import ButtonSection from "./components/ButtonSection";
-import { ResumeIcon } from "./components/Constant/SvgIcon";
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import Home from './pages/Home/Home'; // Import the Home component
+import TidyCalEmbed from './components/TidyCalEmbed'; // Import the TidyCalEmbed component
+import Resume from './components/Resume';
 
 function App() {
   return (
-    <Background>
-      <Container>
-        <HeroSection />
-        <SecondarySection />
-        <EventSection />
-        <Line />
-        <div className="ContentWrapper">
-          <h4>My Apps on the App Store:</h4>
-          <Lead leadText="LeadLeadLeadLeadLeadLeadLead" />
-          <Lead leadText="LeadLeadLeadLeadC" />
-          <Lead leadText="LeadLeadLead" />
-        </div>
-        <Line className="line" />
-        <ButtonSection
-          className="handIcon"
-          BtnIcon={<ResumeIcon />}
-          BtnText="Resume"
-        />
-        <Line />
-        <FooterComponent />
-      </Container>
-    </Background>
+    <Router>
+      <AppWrapper>
+        <Routes>
+          {/* Home Page */}
+          <Route path="/" element={<Home />} />
+
+          {/* /book Page */}
+          <Route path="/book" element={<TidyCalEmbed />} />
+        
+        {/* Resume Page */}
+        <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </AppWrapper>
+    </Router>
   );
 }
 
 export default App;
-const Background = styled.div`
-  background-color: #eef2f5;
+
+// Common Wrapper
+const AppWrapper = styled.div`
   width: 100%;
+  height: 100vh;
 `;
 
-const Container = styled.div`
+// /book Page Styling
+const EmbedBackground = styled.div`
+  background-color: #ffffff;
   display: flex;
-  height: auto;
-  max-width: 600px;
-  margin: auto;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
-  .ContentWrapper {
-    width: 100%;
-    h4 {
-      font-size: 18px;
-      font-weight: 600;
-      text-align: left;
-      margin-bottom: 1em;
-      font-family: "Inter", sans-serif;
-    }
-  }
-  .handIcon {
-    background-color: #783ff3;
-    color: white;
-    width: 100%;
-    margin-top: 2em;
-  }
-  .line {
-    margin-top: -7px;
-  }
+  height: 100vh;
+`;
+
+const EmbedContainer = styled.div`
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
 `;
