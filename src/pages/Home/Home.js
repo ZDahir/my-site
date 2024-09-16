@@ -19,10 +19,9 @@ const Home = () => {
         <EventSection />
         <Line />
         <div className="ContentWrapper">
-          <h4>My Apps on the App Store:</h4>
-          <Lead leadText="LeadLeadLeadLeadLeadLeadLead" />
-          <Lead leadText="LeadLeadLeadLeadC" />
-          <Lead leadText="LeadLeadLead" />
+          <h4>Checkout my Apps on the App Store:</h4>
+          <Lead leadText="EzRhymes | The Ultimate App to Elevate Your Rhymes" />
+          <Lead leadText="Connect X | Connect Four Reimagined" />
         </div>
         <Line className="line" />
         <ButtonSection className="handIcon" BtnIcon={<ResumeIcon />} BtnText="Resume" />

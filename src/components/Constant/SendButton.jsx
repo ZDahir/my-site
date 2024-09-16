@@ -1,20 +1,20 @@
-/** @format */
-
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom"; // Import Link
 
 const SendButton = ({ className }) => {
   return (
     <>
-      <BtnContainer href="#" className={className}>
-        Send me a message
-      </BtnContainer>
+      <StyledLink to="/book" className={className}>
+        Book a time to chat
+      </StyledLink>
     </>
   );
 };
 
 export default SendButton;
-const BtnContainer = styled.a`
+
+const StyledLink = styled(Link)` // Use Link component
   background: none;
   border: none;
   margin-top: 2em;

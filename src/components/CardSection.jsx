@@ -12,9 +12,8 @@ const CardSection = () => {
         <UsersCard>
           <img src="/images/users.PNG" alt="" />
           <h1 className="cardHeading">500+</h1>
-          <Heading className="cardSubHeading">LeadLeadLeadLead</Heading>
-          <ParaText className="cardPara aboutText">
-            LeadLeadLeadLeadLead aaedjeqkeqjkd
+          <Heading className="cardSubHeading">Black Youth Taught & Inspired by me @ BlackBoysCode.</Heading>
+          <ParaText className="cardPara aboutText">                   
           </ParaText>
           <ParaText className="cardPara datePara">
             Last updated Jan 2, 2024
@@ -23,19 +22,31 @@ const CardSection = () => {
       </CardWrapper>
 
       <div className="column">
-        <CardWrapper>
-          <div className="card secondCard">
-            <Heading>LeadLeadLead</Heading>
-          </div>
-        </CardWrapper>
+      <CardWrapper>
+  <a 
+    href="https://apps.apple.com/il/developer/zaid-dahir/id1639486305" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style={{ color: 'inherit', textDecoration: 'underline' }} // Add underline
+  >
+    <div className="card secondCard">
+      <Heading>
+        Check out my apps!
+      </Heading>
+    </div>
+  </a>
+</CardWrapper>
+
+
+
 
         <CardWrapper>
           <div className="card thirdCard">
             <Heading className="cardSubHeading thirdCardHeading">
-              Hosting a Software Engineer Intern?
+            Open to Collaborate or Chat?
             </Heading>
             <ParaText className="cardPara">
-              My provide exclusive influencer and model services.
+            Interested in a collab through BlackBoysCode or NSBE?
             </ParaText>
             <SendButton />
           </div>

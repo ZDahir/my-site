@@ -29,14 +29,14 @@ const HeroSection = () => {
           className="resume" 
           BtnIcon={<ResumeIcon />} 
           BtnText="Resume" 
-          onClick={() => navigate('/resume')} // Navigate to /resume when clicked
+          onClick={() => navigate('/resume')} 
         />
 
         {/* Portfolio Button - Redirect to an external URL */}
         <ButtonSection 
           BtnIcon={<ChromeIcon />} 
           BtnText="My Portfolio" 
-          url="https://your-portfolio-website.com" // Replace with your portfolio URL
+          url="https://your-portfolio-website.com" 
         />
       </BtnContainer>
       <CardSection />
