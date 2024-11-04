@@ -1,16 +1,28 @@
-import React from "react";
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import ProfileImage from "./ProfileImage";
 import Heading from "./Heading";
 import IconSection from "./IconSection";
 import ButtonSection from "./ButtonSection";
 import CardSection from "./CardSection";
+import ContactModal from "./ContactModal"; // Import the ContactModal
 import { ChromeIcon, ResumeIcon } from "./Constant/SvgIcon";
 import styled from "styled-components";
-import { downloadVCard } from "../utils/vCardUtils"; // Import the downloadVCard function
+import useSaveContact from "../hooks/useSaveContact"; // Import the custom hook
 
 const HeroSection = () => {
   const navigate = useNavigate(); // Initialize the navigate function
+  const { handleSaveContact, isSaving } = useSaveContact(); // Use the custom hook
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  const handleModalSubmit = (fullName, phoneNumber, notes) => {
+    handleSaveContact(fullName, phoneNumber, notes); // Pass values to handleSaveContact
+    setIsModalOpen(false); // Close modal after submission
+  };
+  
 
   return (
     <>
@@ -22,7 +34,11 @@ const HeroSection = () => {
       <IconSection />
       <BtnContainer>
         {/* Save Contact Button */}
-        <ButtonSection BtnIcon={<ChromeIcon />} BtnText="Save Contact" onClick={downloadVCard} />
+        <ButtonSection 
+          BtnIcon={<ChromeIcon />} 
+          BtnText={"Exchange Contact"} 
+          onClick={handleOpenModal} // Open modal on click
+        />
 
         {/* Resume Button */}
         <ButtonSection 
@@ -40,6 +56,13 @@ const HeroSection = () => {
         />
       </BtnContainer>
       <CardSection />
+
+      {/* Modal */}
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+        onSubmit={handleModalSubmit} 
+      />
     </>
   );
 };
