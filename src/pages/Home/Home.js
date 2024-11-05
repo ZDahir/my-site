@@ -20,8 +20,8 @@ const Home = () => {
         <Line />
         <div className="ContentWrapper">
           <h4>Checkout my Apps on the App Store:</h4>
-          <Lead leadText="EzRhymes | The Ultimate App to Elevate Your Rhymes" />
-          <Lead leadText="Connect X | Connect Four Reimagined" />
+          <Lead leadText="EzRhymes | The Ultimate App to Elevate Your Rhymes" link="https://apps.apple.com/il/app/ezrhymes/id1639486303" />
+          <Lead leadText="Connect X | Connect Four Reimagined" link="https://apps.apple.com/il/app/connect-x/id6670289202?platform=iphone" />
         </div>
         <Line className="line" />
         <ButtonSection className="handIcon" BtnIcon={<ResumeIcon />} BtnText="Resume" />

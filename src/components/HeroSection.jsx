@@ -52,7 +52,7 @@ const HeroSection = () => {
         <ButtonSection 
           BtnIcon={<ChromeIcon />} 
           BtnText="My Portfolio" 
-          url="https://your-portfolio-website.com" 
+          url="https://apps.apple.com/il/developer/zaid-dahir/id1639486305" 
         />
       </BtnContainer>
       <CardSection />

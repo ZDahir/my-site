@@ -12,7 +12,7 @@ const ButtonSection = ({ className, BtnIcon, BtnText, onClick, url }) => {
 
   return (
     <CustomButton className={className} onClick={handleClick}>
-      {BtnIcon} {BtnText}
+      {BtnIcon} <span>{BtnText}</span>
     </CustomButton>
   );
 };
@@ -35,7 +35,18 @@ export const CustomButton = styled.button`
   width: fit-content;
   cursor: pointer;
   border: none;
+  transition: background-color 0.3s, transform 0.2s;
+
   &:hover {
     background-color: #f0f0f0;
+    transform: scale(1.02); /* Slightly scales up the button for a smooth effect */
+  }
+
+  &:active {
+    transform: scale(0.98); /* Scales down slightly on click for feedback */
+  }
+
+  span {
+    font-size: 16px;
   }
 `;

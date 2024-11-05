@@ -15,11 +15,9 @@ const useSaveContact = () => {
       sendEmail(fullName, phoneNumber, notes) // Pass these three values
         .then((response) => {
           console.log('Email successfully sent!', response.status, response.text);
-          alert('Your information has been sent successfully.');
         })
         .catch((error) => {
           console.error('Failed to send the email:', error);
-          alert('Failed to send your information. Please try again later.');
         })
         .finally(() => {
           setIsSaving(false);

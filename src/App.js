@@ -1,9 +1,8 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
-import Home from './pages/Home/Home'; // Import the Home component
-import TidyCalEmbed from './components/TidyCalEmbed'; // Import the TidyCalEmbed component
+import Home from './pages/Home/Home';
+import TidyCalEmbed from './components/TidyCalEmbed';
 import Resume from './components/Resume';
 
 function App() {
@@ -14,11 +13,20 @@ function App() {
           {/* Home Page */}
           <Route path="/" element={<Home />} />
 
-          {/* /book Page */}
-          <Route path="/book" element={<TidyCalEmbed />} />
-        
-        {/* Resume Page */}
-        <Route path="/resume" element={<Resume />} />
+          {/* /book Page with Styled EmbedBackground and EmbedContainer */}
+          <Route
+            path="/book"
+            element={
+              <EmbedBackground>
+                <EmbedContainer>
+                  <TidyCalEmbed />
+                </EmbedContainer>
+              </EmbedBackground>
+            }
+          />
+
+          {/* Resume Page */}
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </AppWrapper>
     </Router>

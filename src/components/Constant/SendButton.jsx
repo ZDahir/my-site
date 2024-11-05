@@ -4,17 +4,16 @@ import { Link } from "react-router-dom"; // Import Link
 
 const SendButton = ({ className }) => {
   return (
-    <>
-      <StyledLink to="/book" className={className}>
-        Book a time to chat
-      </StyledLink>
-    </>
+    <StyledLink to="/book" className={className}>
+      Book a time to chat
+    </StyledLink>
   );
 };
 
 export default SendButton;
 
-const StyledLink = styled(Link)` // Use Link component
+// Styled Link component
+const StyledLink = styled(Link)`
   background: none;
   border: none;
   margin-top: 2em;
@@ -27,3 +26,4 @@ const StyledLink = styled(Link)` // Use Link component
   padding: 0;
   color: #000000;
 `;
+
