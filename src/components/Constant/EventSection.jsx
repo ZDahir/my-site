@@ -14,7 +14,7 @@ const EventSection = () => {
       <EventsContainer>
         <Heading className="eventsTitle">Upcoming events</Heading>
         <div className="ImageWrapper">
-          {/* <img src="/images/Events.jpeg" alt="Events" className="eventsImage" /> */}
+          {/* <img src="/images/events.png" alt="Events" className="eventsImage" /> */}
           <div className="dateContainer">
             <Heading className="dateHeading">24</Heading>
             <ParaText className="datePara">August</ParaText>
@@ -52,7 +52,7 @@ const EventsContainer = styled.div`
   .ImageWrapper {
     position: relative;
     height: 350px;
-    background-image: url("./images/Events.jpg");
+    background-image: url("./images/events.png");
     background-position: center; /* Center the background image */
     background-repeat: no-repeat;
     background-size: cover; /* Ensure the image covers the div without squeezing */
