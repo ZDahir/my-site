@@ -56,7 +56,7 @@ const ContactModal = ({ isOpen, onClose, onSubmit }) => {
             />
           </InputGroup>
           <ButtonGroup>
-            <PrimaryButton type="submit">Send</PrimaryButton>
+            <PrimaryButton type="submit">Exchange</PrimaryButton>
             <SecondaryButton type="button" onClick={onClose}>No Thanks</SecondaryButton>
           </ButtonGroup>
         </form>
