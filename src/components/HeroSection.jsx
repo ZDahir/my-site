@@ -22,7 +22,7 @@ const HeroSection = () => {
     handleSaveContact(fullName, phoneNumber, notes); // Pass values to handleSaveContact
     setIsModalOpen(false); // Close modal after submission
   };
-  
+  //
 
   return (
     <>
