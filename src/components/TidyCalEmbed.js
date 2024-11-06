@@ -1,22 +1,35 @@
-import React, { useEffect } from 'react';
+// src/components/TidyCalEmbed.js
+import React, { useEffect, useRef } from 'react';
 
 const TidyCalEmbed = () => {
-  useEffect(() => {
-    // Dynamically load the TidyCal script
-    const script = document.createElement('script');
-    script.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
+  const embedContainer = useRef(null);
 
-    // Cleanup the script when the component unmounts
-    return () => {
-      document.body.removeChild(script);
-    };
+  useEffect(() => {
+    // Check if the script already exists to prevent duplicate loading
+    const existingScript = document.querySelector('script[src="https://asset-tidycal.b-cdn.net/js/embed.js"]');
+    
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+      
+      script.onload = () => {
+        console.log('TidyCal script loaded');
+      };
+    }
+
+    // Directly add the data-path attribute without a wrapper
+    if (embedContainer.current) {
+      embedContainer.current.setAttribute("data-path", "zaidmdahir");
+    }
   }, []);
 
-  return (
-    <div className="tidycal-embed" data-path="zaidmdahir"></div>
-  );
+  return <div ref={embedContainer} className="tidycal-embed"></div>;
 };
 
 export default TidyCalEmbed;
+
+
+
+

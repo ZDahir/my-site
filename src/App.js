@@ -14,23 +14,18 @@ function App() {
           {/* Home Page */}
           <Route path="/" element={<Home />} />
 
-          {/* /book Page */}
-          <Route path="/book" element={<TidyCalEmbed />} />
-        
-        {/* Resume Page */}
-        <Route path="/resume" element={<Resume />} />
+          {/* TidyCal Embed Page */}
+          <Route
+            path="/book"
+            element={
+              <EmbedFullScreen>
+                <TidyCalEmbed />
+              </EmbedFullScreen>
+            }
+          />
 
-        <Route
-  path="/book"
-  element={
-    <EmbedBackground>
-      <EmbedContainer>
-        <TidyCalEmbed />
-      </EmbedContainer>
-    </EmbedBackground>
-  }
-/>
-
+          {/* Resume Page */}
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </AppWrapper>
     </Router>
@@ -39,27 +34,18 @@ function App() {
 
 export default App;
 
-// Common Wrapper
+// Global App Wrapper
 const AppWrapper = styled.div`
   width: 100%;
   height: 100vh;
 `;
 
-
-// /book Page Styling
-const EmbedBackground = styled.div`
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// Fullscreen Embed Styling for TidyCal
+const EmbedFullScreen = styled.div`
+  width: 100vw;
   height: 100vh;
-`;
-const EmbedContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* No additional styles that might interfere */
+  background-color: #ffffff; /* Optional background color */
 `;
-
-
-
