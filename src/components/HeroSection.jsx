@@ -26,7 +26,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <ProfileImage src="my-site/public/images/profile.png" alt="Profile Picture" />
+      <ProfileImage src="/images/profile.png" alt="Profile Picture" />
       <Heading>Zaid Dahir</Heading>
       <Text>
         Chapter Lead @ BlackBoysCode | NSBE East Canada Vice Chair | Prev SWE Intern @ TD Bank | CS @ York University
