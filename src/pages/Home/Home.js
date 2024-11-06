@@ -9,15 +9,16 @@ import Line from '../../components/Line';
 import Lead from '../../components/Lead';
 import ButtonSection from '../../components/ButtonSection';
 import { ResumeIcon } from '../../components/Constant/SvgIcon';
+import MessageCard from '../../components/MessageCard';
 
 const Home = () => {
   return (
     <Background>
       <Container>
         <HeroSection />
-        <SecondarySection />
-        <EventSection />
+        <MessageCard /> {/* <SecondarySection /> */}
         <Line />
+        {/* <EventSection /> */}
         <div className="ContentWrapper">
           <h4>Checkout my Apps on the App Store:</h4>
           <Lead leadText="EzRhymes | The Ultimate App to Elevate Your Rhymes" link="https://apps.apple.com/il/app/ezrhymes/id1639486303" />

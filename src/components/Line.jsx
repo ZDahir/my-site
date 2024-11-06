@@ -10,7 +10,7 @@ const Line = ({ className }) => {
 export default Line;
 const HrLine = styled("div")`
   width: 100%;
-  height: 1px;
+  height: 0px;
   background-color: #48484821;
   margin-top: 3em;
 `;
