@@ -36,6 +36,7 @@ const CardContainer = styled.div`
   max-width: 100%; /* Maintains the current max-width */
   overflow: hidden;
   margin: auto;
+  margin-bottom: 3em;
   background-color: #000;
   min-height: 200px;
   border-radius: 32px;

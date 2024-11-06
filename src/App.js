@@ -18,6 +18,8 @@ function App() {
           <Route path="/book" element={<TidyCalEmbed />} />
         
         {/* Resume Page */}
+        <Route path="/resume" element={<Resume />} />
+
         <Route
   path="/book"
   element={
