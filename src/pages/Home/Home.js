@@ -9,6 +9,7 @@ import Lead from '../../components/Lead';
 import ButtonSection from '../../components/ButtonSection';
 import { ResumeIcon } from '../../components/Constant/SvgIcon';
 import MessageCard from '../../components/MessageCard';
+import SecondarySection from '../../components/SecondarySection';
 
 const Home = () => {
   const navigate = useNavigate(); 
@@ -17,6 +18,7 @@ const Home = () => {
     <Background>
       <Container>
         <HeroSection />
+        <SecondarySection/>
         <MessageCard />
         <div className="ContentWrapper">
           <h4>Checkout my Apps on the App Store:</h4>

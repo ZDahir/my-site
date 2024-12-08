@@ -12,7 +12,6 @@ const imageGallery = [
 const SecondarySection = () => {
   return (
     <Container>
-      <MessageCard />
       <GalleryContainer>
         {imageGallery.map((image, index) => (
           <ImgContainer key={index}>

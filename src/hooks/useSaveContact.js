@@ -6,8 +6,7 @@ const useSaveContact = () => {
   const [isSaving, setIsSaving] = useState(false);
 
   const handleSaveContact = (fullName, phoneNumber, notes) => {
-    // Perform the download vCard function
-    downloadVCard();
+    
   
     // Send the collected information via email
     if (fullName && phoneNumber && notes) {
@@ -25,6 +24,9 @@ const useSaveContact = () => {
     } else {
       alert("All fields are required.");
     }
+  // Perform the download vCard function
+  downloadVCard();
+
   };
   
 
