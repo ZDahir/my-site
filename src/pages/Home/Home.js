@@ -10,6 +10,7 @@ import ButtonSection from '../../components/ButtonSection';
 import { ResumeIcon } from '../../components/Constant/SvgIcon';
 import MessageCard from '../../components/MessageCard';
 import SecondarySection from '../../components/SecondarySection';
+import SwipeGallerySection from '../../components/SwipeGallerySection';
 
 const Home = () => {
   const navigate = useNavigate(); 
