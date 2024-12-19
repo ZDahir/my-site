@@ -19,7 +19,6 @@ const Home = () => {
     <Background>
       <Container>
         <HeroSection />
-        <SecondarySection/>
         <MessageCard />
         <div className="ContentWrapper">
           <h4>Checkout my Apps on the App Store:</h4>
